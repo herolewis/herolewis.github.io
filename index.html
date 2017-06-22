@@ -199,39 +199,9 @@
 </ul>
 </li>
 </ul>
-<h3 id="3-TCP三次握手"><a href="#3-TCP三次握手" class="headerlink" title="3. TCP三次握手"></a>3. TCP三次握手</h3><ul>
-<li><p>三次握手的目的是<em>连接服务器指定端口</em>，<em>建立TCP连接</em>,并<em>同步连接双方的序列号和确认号并交换 TCP 窗口大小信息</em>.在socket编程中，客户端执行connect()时。将触发三次握手。</p>
-<ul>
-<li><p>[x] 第一次握手：建立连接时，客户端A发送SYN包(SYN=j)到服务器B，并进入SYN_SEND状态，等待服务器B确认。</p>
-</li>
-<li><p>[x] 第二次握手：服务器B收到SYN包，必须确认客户A的SYN(ACK=j+1)，同时自己也发送一个SYN包(SYN=k)，即SYN+ACK包，此时服务器B进入SYN_RECV状态。</p>
-</li>
-<li><p>[x] 第三次握手：客户端A收到服务器B的SYN＋ACK包，向服务器B发送确认包ACK(ACK=k+1)，此包发送完毕，客户端A和服务器B进入ESTABLISHED状态，完成三次握手。</p>
-</li>
-</ul>
-</li>
-<li><p>形象比喻<a href="http://zhaoyongtao.blog.51cto.com/10955972/1783901" target="_blank" rel="external">(引用自)</a> ： </p>
-<blockquote>
-<p>两个素未谋面的人遇见了，一个人(client端)想认识对方(server端)..于是那个人(client端)主动向对方(server端)挥手（意味着接下来有握手的冲动，即是带SYN标志的TCP报文到服务器），而对方(server端)也向那个人(client端)挥手（对刚才客户端SYN报文的回应；同时又标志SYN给客户端，询问客户端是否准备好进行数据通讯），这时候对方(server端)是否愿意握那个人(client端)的手（取决于防火墙等定义的规则决定），那个人(client端)确认了对方(server端)愿意，才能走过去握手（客户必须再次回应服务段一个ACK报文），这样就达到三次握手（建立连接）的原理；</p>
-</blockquote>
-</li>
-</ul>
-<p><img src="http://images2015.cnblogs.com/blog/1014956/201706/1014956-20170616224131087-865633452.jpg" alt="TCP"></p>
-<h3 id="4-MVVM-参考链接"><a href="#4-MVVM-参考链接" class="headerlink" title="4.  MVVM (参考链接)"></a>4.  MVVM (<a href="http://www.ruanyifeng.com/blog/2015/02/mvcmvp_mvvm.html" target="_blank" rel="external">参考链接</a>)</h3><h3 id="5-V8渲染引擎怎么解析js"><a href="#5-V8渲染引擎怎么解析js" class="headerlink" title="5. V8渲染引擎怎么解析js"></a>5. V8渲染引擎怎么解析js</h3><ul>
-<li><p>简单来说，JavaScript 引擎会加载你的源代码，把它分解成字符串（又叫做分词），再 把这些字符串转换 成编译器可以理解的字节码，然后执行这些字节码。</p>
-</li>
-<li><p>Google 的 V8 引擎 是用 C++ 编写的，它也能够编译并执行 JavaScript 源代码、处理内存分配和垃圾回收。它被设计成由<em>两个编译器组成，可以把源码直接编译成机器码</em>：</p>
-<ul>
-<li>[x] Full-codegen：输出未优化代码的快速编译器</li>
-<li>[x] Crankshaft: 输出执行效率高、优化过的代码的慢速编译器</li>
-</ul>
-</li>
-</ul>
-<h3 id="6-移动端性能优化"><a href="#6-移动端性能优化" class="headerlink" title="6. 移动端性能优化"></a>6. <a href="https://isux.tencent.com/h5-performance.html" target="_blank" rel="external">移动端性能优化</a></h3><p><img src="http://images2015.cnblogs.com/blog/1014956/201706/1014956-20170617130157540-242550015.png" alt=""></p>
-<h3 id="7-并发请求，合并请求"><a href="#7-并发请求，合并请求" class="headerlink" title="7.  并发请求，合并请求"></a>7.  并发请求，合并请求</h3><h3 id="8-redux实现原理"><a href="#8-redux实现原理" class="headerlink" title="8.  redux实现原理"></a>8.  redux实现原理</h3><ul>
-<li>Redux有三个核心的概念：Store、Action和Reducer<h3 id="9-webpack打包机制"><a href="#9-webpack打包机制" class="headerlink" title="9.  webpack打包机制"></a>9.  webpack打包机制</h3><h3 id="10-了解cookie和session工作机制"><a href="#10-了解cookie和session工作机制" class="headerlink" title="10. 了解cookie和session工作机制"></a>10. 了解cookie和session工作机制</h3><h3 id="11-原生js实现用户登录验证"><a href="#11-原生js实现用户登录验证" class="headerlink" title="11. 原生js实现用户登录验证"></a>11. 原生js实现用户登录验证</h3><h3 id="12-学习webpack"><a href="#12-学习webpack" class="headerlink" title="12. 学习webpack"></a>12. <a href="https://doc.webpack-china.org/concepts/" target="_blank" rel="external">学习webpack</a></h3></li>
-</ul>
-
+        
+          <a class="article-more-a" href="/2017/06/22/web-interview-01/#more">more >></a>
+        
       
 
       
