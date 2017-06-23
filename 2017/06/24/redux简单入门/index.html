@@ -6,17 +6,19 @@
   <meta name="renderer" content="webkit">
   <meta http-equiv="X-UA-Compatible" content="IE=edge" >
   <link rel="dns-prefetch" href="https://jiabingli.github.io">
-  <title>Archives: 2017 | 空谷幽兰</title>
+  <title>learning redux record | 空谷幽兰</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="如果你有理想的话，就要去努力实现">
-<meta property="og:type" content="website">
-<meta property="og:title" content="空谷幽兰">
-<meta property="og:url" content="https://jiabingli.github.io/archives/2017/index.html">
+  <meta name="description" content="redux是什么 官方解释：Redux 是 JavaScript状态容器，提供可预测化的状态管理。可以让你构建一致化的应用，运行于不同的环境（客户端、服务器、原生应用）简单来说，Redux是一个“中心数据库”，我们可以把应用中的各种状态与数据存放在Redux中，并且可以通过Redux提供的方法对数据库中的数据进行更新，更新数据之后，通过诸如React Redu这样的工具来将数据的更新同步到UI上">
+<meta name="keywords" content="redux action reducer store">
+<meta property="og:type" content="article">
+<meta property="og:title" content="learning redux record">
+<meta property="og:url" content="https://jiabingli.github.io/2017/06/24/redux简单入门/index.html">
 <meta property="og:site_name" content="空谷幽兰">
-<meta property="og:description" content="如果你有理想的话，就要去努力实现">
+<meta property="og:description" content="redux是什么 官方解释：Redux 是 JavaScript状态容器，提供可预测化的状态管理。可以让你构建一致化的应用，运行于不同的环境（客户端、服务器、原生应用）简单来说，Redux是一个“中心数据库”，我们可以把应用中的各种状态与数据存放在Redux中，并且可以通过Redux提供的方法对数据库中的数据进行更新，更新数据之后，通过诸如React Redu这样的工具来将数据的更新同步到UI上">
+<meta property="og:updated_time" content="2017-06-23T16:32:36.086Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="空谷幽兰">
-<meta name="twitter:description" content="如果你有理想的话，就要去努力实现">
+<meta name="twitter:title" content="learning redux record">
+<meta name="twitter:description" content="redux是什么 官方解释：Redux 是 JavaScript状态容器，提供可预测化的状态管理。可以让你构建一致化的应用，运行于不同的环境（客户端、服务器、原生应用）简单来说，Redux是一个“中心数据库”，我们可以把应用中的各种状态与数据存放在Redux中，并且可以通过Redux提供的方法对数据库中的数据进行更新，更新数据之后，通过诸如React Redu这样的工具来将数据的更新同步到UI上">
   
     <link rel="alternative" href="/atom.xml" title="空谷幽兰" type="application/atom+xml">
   
@@ -156,36 +158,72 @@
             <canvas data-colors="#eaeaea" data-sectionHeight="100" data-contentId="js-content" id="myCanvas1" class="anm-canvas"></canvas>
           </div>
           <div id="js-content" class="content-ll">
-            
-  
-  
+            <article id="post-redux简单入门" class="article article-type-post " itemscope itemprop="blogPost">
+  <div class="article-inner">
     
-    
-      
-      
-      <section class="archives-wrap">
-        <div class="archive-year-wrap">
-          <a href="/archives/2017" class="archive-year">2017</a>
-        </div>
-        <div class="archives">
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2017/06/24/redux简单入门/" class="archive-article-date">
-  	<time datetime="2017-06-23T16:00:51.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2017-06-24</time>
-</a>
-        </div>
-    	 
+      <header class="article-header">
+        
   
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2017/06/24/redux简单入门/">learning redux record</a>
+    <h1 class="article-title" itemprop="name">
+      learning redux record
     </h1>
   
 
-        <div class="article-info info-on-right">
-          
+        
+        <a href="/2017/06/24/redux简单入门/" class="archive-article-date">
+  	<time datetime="2017-06-23T16:00:51.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2017-06-24</time>
+</a>
+        
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h2 id="redux是什么"><a href="#redux是什么" class="headerlink" title="redux是什么"></a>redux是什么</h2><blockquote>
+<p>官方解释：Redux 是 JavaScript状态容器，提供可预测化的状态管理。可以让你构建一致化的应用，运行于不同的环境（客户端、服务器、原生应用）<br>简单来说，Redux是一个“中心数据库”，我们可以把应用中的各种状态与数据存放在Redux中，并且可以通过Redux提供的方法对数据库中的数据进行更新，更新数据之后，通过诸如React Redu这样的工具来将数据的更新同步到UI上</p>
+</blockquote>
+<a id="more"></a>
+<ul>
+<li>摘自网上形象的比喻：<blockquote>
+<ul>
+<li>把 js 比喻成巴士，把 store, container, reducer 比喻为三个车站，再把 <strong>state 和 action</strong> 比喻成<strong>两种乘客</strong>。这是一趟环路巴, js巴士 从 <strong>store车站</strong> 出发，<strong>载上 state乘客</strong> ， state乘客 到达某个 <strong>container车站</strong> 下车并把自己展示出来, 过了一会，有一个 <strong>action乘客 上车</strong>了， js巴士 把 <strong>action乘客 送到 reducer车站</strong> ，在这里 <strong>action乘客 和 state乘客 生了一个孩子 new state</strong> ，js巴士把 <strong>new state 送回了 store车站</strong> （好像是人生轮回→_→）</li>
+</ul>
+</blockquote>
+</li>
+</ul>
+<h3 id="1-redux三大核心之-Store"><a href="#1-redux三大核心之-Store" class="headerlink" title="1. redux三大核心之 (Store)"></a>1. redux三大核心之 (Store)</h3><h3 id="2-redux三大核心之-Action"><a href="#2-redux三大核心之-Action" class="headerlink" title="2. redux三大核心之 (Action)"></a>2. redux三大核心之 (Action)</h3><h3 id="3-redux三大核心之-Reducer"><a href="#3-redux三大核心之-Reducer" class="headerlink" title="3. redux三大核心之 (Reducer)"></a>3. redux三大核心之 (Reducer)</h3>
+      
+
+      
+        <div class="page-reward">
+          <a href="javascript:;" class="page-reward-btn tooltip-top">
+            <div class="tooltip tooltip-east">
+            <span class="tooltip-item">
+              赏
+            </span>
+            <span class="tooltip-content">
+              <span class="tooltip-text">
+                <span class="tooltip-inner">
+                  <p class="reward-p"><i class="icon icon-quo-left"></i>谢谢你请我吃糖果<i class="icon icon-quo-right"></i></p>
+                  <div class="reward-box">
+                    
+                    
+                    <div class="reward-box-item">
+                      <img class="reward-img" src="http://oruq1ln1t.bkt.clouddn.com/weixin.png">
+                      <span class="reward-type">微信</span>
+                    </div>
+                    
+                  </div>
+                </span>
+              </span>
+            </span>
+          </div>
+          </a>
+        </div>
+      
+    </div>
+    <div class="article-info article-info-index">
+      
+      
 	<div class="article-tag tagcloud">
 		<i class="icon-price-tags icon"></i>
 		<ul class="article-tag-list">
@@ -197,57 +235,89 @@
 		</ul>
 	</div>
 
-          
+      
 
+      
+
+      
+        
+<div class="share-btn share-icons tooltip-left">
+  <div class="tooltip tooltip-east">
+    <span class="tooltip-item">
+      <a href="javascript:;" class="share-sns share-outer">
+        <i class="icon icon-share"></i>
+      </a>
+    </span>
+    <span class="tooltip-content">
+      <div class="share-wrap">
+        <div class="share-icons">
+          <a class="weibo share-sns" href="javascript:;" data-type="weibo">
+            <i class="icon icon-weibo"></i>
+          </a>
+          <a class="weixin share-sns wxFab" href="javascript:;" data-type="weixin">
+            <i class="icon icon-weixin"></i>
+          </a>
+          <a class="qq share-sns" href="javascript:;" data-type="qq">
+            <i class="icon icon-qq"></i>
+          </a>
+          <a class="douban share-sns" href="javascript:;" data-type="douban">
+            <i class="icon icon-douban"></i>
+          </a>
+          <a class="qzone share-sns" href="javascript:;" data-type="qzone">
+            <i class="icon icon-qzone"></i>
+          </a>
+          <a class="facebook share-sns" href="javascript:;" data-type="facebook">
+            <i class="icon icon-facebook"></i>
+          </a>
+          <a class="twitter share-sns" href="javascript:;" data-type="twitter">
+            <i class="icon icon-twitter"></i>
+          </a>
+          <a class="google share-sns" href="javascript:;" data-type="google">
+            <i class="icon icon-google"></i>
+          </a>
         </div>
-        <div class="clearfix"></div>
-    </header>
+      </div>
+    </span>
+  </div>
+</div>
+
+<div class="page-modal wx-share js-wx-box">
+    <a class="close js-modal-close" href="javascript:;"><i class="icon icon-close"></i></a>
+    <p>扫一扫，分享到微信</p>
+    <div class="wx-qrcode">
+      <img src="http://s.jiathis.com/qrcode.php?url=https://jiabingli.github.io/2017/06/24/redux简单入门/" alt="微信分享二维码">
+    </div>
+</div>
+
+<div class="mask js-mask"></div>
+      
+      <div class="clearfix"></div>
+    </div>
   </div>
 </article>
+
   
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2017/06/22/web-interview-01/" class="archive-article-date">
-  	<time datetime="2017-06-22T14:02:04.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2017-06-22</time>
-</a>
-        </div>
-    	 
+<nav id="article-nav">
   
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2017/06/22/web-interview-01/">web前端面试总结01</a>
-    </h1>
+  
+    <a href="/2017/06/22/web-interview-01/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">web前端面试总结01</div>
+      <i class="icon-circle-right"></i>
+    </a>
+  
+</nav>
+
+
+
+
+
+  
+  
   
 
-        <div class="article-info info-on-right">
-          
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">javascript html react redux 前端面试</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-  
-    </div></section>
   
 
-    
+  
 
 
           </div>
@@ -270,8 +340,8 @@
 	var yiliaConfig = {
 		mathjax: false,
 		isHome: false,
-		isPost: false,
-		isArchive: true,
+		isPost: true,
+		isArchive: false,
 		isTag: false,
 		isCategory: false,
 		open_in_new: true,
