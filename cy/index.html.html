@@ -13,8 +13,19 @@
         body {
             margin: 0;
             padding: 0;
+            width: 100vw;
+            height: 100vh;
             background: #ffa5a5;
             background: linear-gradient(to bottom, #ffa5a5 0%,#ffd3d3 100%);
+   
+        }
+
+        .back-end {
+            width: 100vw;
+            height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
         }
 
         .chest {
@@ -80,24 +91,28 @@
             }
         }
         #love {
-            color: #fff;
+            position: absolute;
+            z-index: 33;
+            color: #000;
             text-indent: 2em;
-            margin-top: 30px;
-            font-size: 20px;
+            margin: 20px;
+            font-size: 40px;
             font-family: '微软雅黑';
-            font-weight: 500;
         }
     </style>  
     </head>  
   
     <body>  
         <div id='love'></div> 
-        <div class="chest">
-        <div class="heart left side top"></div>
-        <div class="heart center"></div>
-        <div class="heart right side"></div>
-        </div> 
-        <audio src="http://www.xiami.com/play?ids=/song/playlist/id/394496/object_name/default/object_id/0#loaded" 
+        <div class="back-end">
+            <div class="chest">
+                <div class="heart left side top"></div>
+                <div class="heart center"></div>
+                <div class="heart right side"></div>
+            </div> 
+        </div>
+    
+        <audio src="http://other.web.ra01.sycdn.kuwo.cn/resource/n2/128/24/60/2867178843.mp3" 
         autoplay loop>
         
         </audio>
@@ -109,7 +124,7 @@
                 var love = document.getElementById('love');  
                 if (i <= str.length) {  
                     love.innerHTML = str.slice(0, i++) + '_';  
-                    setTimeout('typing()', 200);//递归调用  
+                    setTimeout('typing()', 150);//递归调用  
                 }  
                 else{  
                     love.innerHTML = str;//结束打字,移除 _ 光标  
