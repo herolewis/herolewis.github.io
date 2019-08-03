@@ -1,8 +1,4 @@
 <!DOCTYPE html>
-<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
-<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
-<!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
-<!--[if gt IE 8]><!--> <html class="no-js"> <!--<![endif]-->
     <head>
         <meta charset="utf-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -13,8 +9,11 @@
     </head>
     <body>
         <div>herolewis</div>
-        <script src="" async defer>
-            window.location.href="https://www.bilibili.com";
+        <script async defer>
+            // defer和async的区别就是defer下载完js的内容后不会立即执行,直到html文档加载解析完成后才执行
+           window.onload = function() {
+                window.location.href="https://www.bilibili.com";
+           }
         </script>
     </body>
 </html>
