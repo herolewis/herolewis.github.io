@@ -1,7 +1,7 @@
 {
   "name": "web",
   "version": "0.1.0",
-  "homepage": "./",
+  "homepage": "https://herolewis.github.io/",
   "private": true,
   "dependencies": {
     "@types/jest": "24.0.16",
